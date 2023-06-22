@@ -4,22 +4,18 @@ LLM Apps is a collection of web applications related to Large Language Models (L
 
 ## Getting Started
 
-For more information and detailed instructions on using the Flashcard App, refer to the [Flashcard App README](flashcard/README.md).
+
 
 ### Flashcard App
 
 The Flashcard App is a web application that allows you to create and display interactive flashcards. It provides a user-friendly interface to create a grid of flashcards with customizable rows and columns. Each flashcard has a front and back side that can be flipped to reveal the information on the other side.
+For more information and detailed instructions on using the Flashcard App, refer to the [Flashcard App README](flashcard/README.md).
 
-#### Features
+### Blogger App
 
-- Dynamic grid: Specify the number of rows and columns for the flashcard grid.
-- Interactive flip animation: Click on a flashcard to flip it and reveal the information on the back side.
-- Customize flashcard content: Enter your own text for the front and back sides of the flashcards.
+This is a Python application that utilizes a large language model (LLM) to generate blog posts and publish them on Google Blogger. The application generates text using the LLM and creates a new blog post with the generated content.
 
-#### Technologies Used
-
-- Front-end: HTML, CSS, JavaScript
-- Back-end: Python, Flask
+For more information and detailed instructions on using the Blogger App, refer to the [Blogger App README](blogger/README.md).
 
 ### Coming Soon
 
