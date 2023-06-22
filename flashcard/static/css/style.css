@@ -1,0 +1,116 @@
+:root {
+    --flashcard-width: 250px;
+    --flashcard-height: 150px;
+    --grid-rows: 3;
+    --grid-cols: 2;
+    --max-width: calc(var(--grid-cols) * var(--flashcard-width) + (var(--grid-cols) + 1) * 20px);
+    --max-height: calc(var(--grid-rows) * var(--flashcard-height) + (var(--grid-rows) + 1) * 20px);
+  }
+
+  body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+  }
+
+  form {
+    margin-bottom: 20px;
+  }
+
+  label {
+    font-weight: bold;
+  }
+
+  input[type="number"],
+  textarea {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 10px;
+    width: 300px;
+    box-sizing: border-box;
+  }
+
+  textarea {
+    resize: vertical;
+    height: 100px;
+  }
+
+  button[type="submit"] {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #4caf50;
+    color: #fff;
+    cursor: grab;
+    font-size: 12px;
+  }
+
+  button[type="submit"]:hover {
+    background-color: #45a049;
+    cursor: grab;
+    
+  }
+
+  #flashcardContainer {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-cols), 1fr);
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+    max-width: var(--max-width);
+    max-height: var(--max-height);
+    overflow: hidden;
+    box-sizing: content-box;
+
+  }
+
+  .flashcard {
+    width: var(--flashcard-width);
+    height: var(--flashcard-height);
+    margin: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    perspective: 1000px;
+    transition: transform 0.6s;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .flashcard:hover .flipper {
+    transform: rotateY(180deg);
+  }
+
+  .flipper {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+
+  .front,
+  .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 9px;
+    font-weight: bold;
+    color: #333;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .front {
+    transform: rotateY(0deg);
+  }
+
+  .back {
+    transform: rotateY(180deg);
+  }

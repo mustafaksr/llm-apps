@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <link rel="stylesheet" type= "text/css" href="{{ url_for('static',filename='css/style.css') }}" />
+</head>
+<body>
+  <form id="gridForm" method="post">
+    <label for="mInput">Number of Rows (m):</label>
+    <input name="mInput" type="number" id="mInput" value="2" min="1" max="5">
+    <br>
+    <label for="nInput">Number of Columns (n):</label>
+    <input name="nInput" type="number" id="nInput" value="3" min="1" max="4">
+    <br>
+    <label for="queryInput">Query:</label>
+    <textarea id="queryInput" name="query" rows="5" cols="65">Can you create flashcards as related to AI, ML, DL and GenAI?</textarea>
+    <br>
+    <button type="submit" id="runButton">Create</button>
+  </form>
+  <br>
+  <div id="flashcardContainer"></div>
+  <script type="module" src="{{ url_for('static',filename='js/script.js') }}"></script>
+</body>
+</html>
